@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Uno</title>
+    <meta name="author" content="Shashaank Krishnatray">
+    <meta name="description" content="learning about buttons/selectors in css and js HTML5">
+    <meta name="generator" content="local host">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/normalize.css">-->
+
+</head>
+<body>
+<div id="AI">
+    <section type="chips" >
+        <img  src="assets/moneysign.png" >
+    </section>
+    <section> <img id="compCard1"></section>
+    <section> <img id="compCard2"></section>
+    <section> <img id="compCard3"></section>
+    <section> <img id="compCard4"></section>
+    <section> <img id="compCard5"></section>
+    <section> <img id="compCard6"></section>
+    <section  type="chips">
+        <img src="assets/moneysign.png" >
+    </section>
+</div>
+
+
+<div id="dealer">
+    <section id="deck">
+        <img id="deal" src="assets/deck.jpg">
+    </section>
+    <section id="notify">
+        <div id="info">
+            <img id="pointer" src="assets/pointer.png">
+            <span><b>Click Deck To Deal</b></span>
+        </div>
+        <div id="controls">
+            <button id="show">Show!!!</button><br/>
+            <button id="reset">Reset!!!</button>
+        </div>
+        <div id="rules">
+            <ol>
+                <li>Cards have base values (1-9) </li>
+                <li>Card colors have Added value as follows
+                    <table border="1" style="width: 100%;">
+                        <tbody>
+                        <tr>
+                            <td style="background-color: blue;"></td>
+                            <td>4</td>
+                            <td style="background-color: green;"></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: yellow;"></td>
+                            <td>2</td>
+                            <td style="background-color: red;"></td>
+                            <td>1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>You know about the color of the opponent's card</li>
+                <li>If you think your current hand is stronger than your opponent's hand, then ask to "SHOW"</li>
+                <li>Else continue till end of game</li>
+            </ol>
+        </div>
+    </section>
+    <section id="result">
+
+      <br/>
+        <span>Computer's score: </span><span id="compScore"></span><br/><br/>
+        <span>Your Score : </span><span id="userScore"></span><br/><br/>
+        <span id="winner"></span>
+    </section>
+</div>
+
+<div id="user">
+    <section  type="chips">
+        <img src="assets/moneysign.png" >
+    </section>
+    <section> <img id="userCard1"></section>
+    <section> <img id="userCard2"></section>
+    <section> <img id="userCard3"></section>
+    <section> <img id="userCard4"></section>
+    <section> <img id="userCard5"></section>
+    <section> <img id="userCard6"></section>
+    <section  type="chips">
+        <img src="assets/moneysign.png" >
+    </section>
+</div>
+</body>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script data-main="scripts/main-built.js" src="scripts/require.js"></script>
+
+</html>

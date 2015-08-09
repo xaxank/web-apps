@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MS108</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">	
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="script" type="text/javascript" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+	
+</head>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="scripts/getAddress.js" type="text/javascript"></script>
+<link rel="icon" href="images/logo.png" type="image/png">
+
+<body>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<div class="sidebar-nav">
+				<div class="sidebar-brand">
+					<a href="index.html">
+						Home
+					</a>
+				</div>
+				<div class="jumbotron well">
+					<input type="text txt-block" id="address" value="Delhi"/>
+					<input class="btn btn-success btn-block" type="button" value="Geocode(Ajax)" onclick="codeAddressAjax()"/ >
+					<input class="btn btn-success btn-block" type="button" value="Geocode(API)" onclick="codeAddressAPI()"/ >
+					<br/>
+				</div>
+				<div class="jumbotron well">
+					<input class="btn btn-primary btn-block" id="current" type="button" value="Get Current Location" onclick="myAddress()"/>
+					<output class="text" id="info" > Your current location will be updated in the coordinates section</output>
+					<textarea class="text well" id="fullAddress" placeholder="full address"></textarea>
+					<br></br>
+				</div>
+				<div class="jumbotron well">
+					<input class="btn btn-primary btn-block" type="button" value="Locate(Ajax)" onclick="cordAddressAjax()"></input>
+					<input class="btn btn-primary btn-block" type="button" value="Locate(API)" onclick="cordAddressAPI()"></input>
+					<input type="number" id="lat" placeholder="Latitude"></input>
+					<input type="number" id="long" placeholder="longitude"></input>
+				</div>			
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /#sidebar-wrapper -->
+	<div class="col-lg-12" id="map-canvas">	</div>
+
+	<footer id="footer"><a href="#menu-toggle" class="btn btn-success" id="menu-toggle">Toggle Menu</a> <font style="color:black;">&copy; Shashaank : 3768</font></footer>
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+</body>
+
+</html>

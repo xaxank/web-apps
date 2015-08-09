@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+</head>
+<body class="container" ng-app="myApp">
+<div class="alignCenter">
+    <div class="contentBox">
+        <div ng-controller="employeeTypeHandler">
+            <ng-include src="url"> </ng-include>
+        </div>
+    </div>
+    <br>
+    <div class="contentBox">
+        <div ng-controller="employeeListHandler">
+            <ng-include src="url"> </ng-include>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<!--<script type="text/javascript" src="scripts/jquery.min.js"></script>-->
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+</html>

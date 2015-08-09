@@ -1,0 +1,65 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+
+}
+
+header,footer{
+	position: relative;
+	width: 100%;
+	right: 0px;
+	left:0px;
+	}
+
+header{
+	background-color:black;
+	top:0px;
+	text-align: center;
+}
+footer{
+	position:fixed;
+	bottom: 0px;
+}
+#version:after{
+	content: "(Desktop)";
+}
+
+.description {
+	background-color: aquamarine;
+	position: relative;
+	display: flex;
+	left:0px;
+	right: 0px;
+	width: 100%;
+	height: 95%;
+	box-sizing: border-box;
+}
+
+
+[side]{
+	text-align: center;
+	height: 97%;
+}
+
+ol{
+	text-align: left;
+}
+
+ul{
+	text-align: right;
+}
+
+p:hover{
+	font-size: xx-large;
+}
+
+footer{
+	text-align: center;
+	background-color: orange;
+	bottom:0px;
+}

@@ -1,0 +1,22 @@
+<form class="contentBox" >
+    <h2>Vehicle Service Request Form</h2>
+    <div ng-repeat=" vehicle in vehicles" ng-if="vehicle.vehiclereg == searchNum" >
+        <label  for="firstName"> First name : </label>
+        <span id="firstName" ng-bind="vehicle.firstname" ></span><br/><br/>
+        <label  for="lastName"> Last name : </label>
+        <span id="lastName" ng-bind="vehicle.lastname" ></span><br/><br/>
+        <label  for="vehicleReg"> Vehicle registration no : </label>
+        <span id="vehicleReg" ng-bind="vehicle.vehiclereg" ></span><br/><br/>
+        <label  for="mobNumber"> Mobile number : </label>
+        <span id="mobNumber" ng-bind="vehicle.mobnumber" ></span><br/><br/>
+        <label  for="address"> Address : </label>
+        <span id="address" ng-bind="vehicle.address" ></span><br/><br/><br/>
+        <label  for="pickUpDate"> Pickup date : </label>
+        <span id="pickUpDate" ng-bind="vehicle.pickupdate" ></span><br/><br/>
+        <label  for="returnDate"> Return date : </label>
+        <span id="returnDate" ng-bind="vehicle.returndate"></span><br/>
+        <div class="navigators">
+            <a href="#home"><button>Back to home screen</button></a>
+        </div>
+    </div>
+</form>

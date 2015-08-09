@@ -1,0 +1,11 @@
+CACHE MANIFEST
+
+# version 0.1
+
+
+styles/style.css
+styles/playerStyle.css
+styles/normalize.css
+index.html
+scripts/jquery.js
+scripts/mediaScripts.js

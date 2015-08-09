@@ -1,0 +1,44 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: forestgreen;
+}
+
+*{
+    text-wrap: normal;
+}
+
+.navbar{
+    background-image: url('../assets/hex.png');
+    background-size: cover;
+}
+
+.nav-center{
+    text-align: center;
+}
+
+.carousel-inner{
+    background-color: goldenrod;
+}
+.content{
+
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.carousel{
+    position: relative;
+    height: 50%;
+}
+
+.row-fluid{
+    height: 60% !important;
+     }
+
+#coach{
+    cursor: pointer;
+}

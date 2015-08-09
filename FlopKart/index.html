@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Shashaank Krishnatray">
+    <meta name="description" content="e-Commerce webapp with knockoutjs in css and js HTML5">
+    <meta name="generator" content="local host">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+
+</head>
+<body >
+<div class="container-fluid">
+    <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Tea[M]aker</a>
+            </div>
+            <div class="collapse navbar-collapse " id="navbar-collapse">
+                <ul class = "nav navbar-nav navbar-right navbar-text">
+                    <li><div><label>Players Available : </label><span data-bind="text : $data.inventory.items().length+' '; "></span></div></li>
+                    <li><div><label>| Players Sold : </label><span data-bind="text : $data.sold(); ">  </span></div></li>
+                    <li><div><label>| Coaches : </label><span data-bind="text : $data.serial().length ">  </span></div></li>
+                    <li><button class="btn btn-info" data-bind="click : addUser">Add new user</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="col-xs-12 " >
+        <div id="myslide" class= "carousel slide container-fluid " >
+            <div class="carousel ">
+                <ol class="carousel-indicators">
+                    <li data-target ="#myslide " data-slide-to="0"></li>
+                    <li data-target ="#myslide " data-slide-to="1"></li>
+                    <li data-target ="#myslide " data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" >
+                    <div class="item active" >
+                        <img class="img-responsive center-block" src="assets/1.jpg">
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive center-block" src="assets/2.jpg">
+                    </div>
+                    <div class="item" >
+                        <img class="img-responsive center-block" src="assets/3.jpg">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control left" href="#myslide" data-slide="prev"></a>
+            <span class="icon-prev"></span>
+            <a class="carousel-control right" href="#myslide" data-slide="next"></a>
+            <span class="icon-next"></span>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div data-bind="foreach:serial" class="jumbotron col-xs-12 col-lg-3" style="background-color: #204d74;">
+            <section class="jumbotron well col-xs-12 col-lg-12">
+                <label>Coach : </label><span data-bind="click: function(){$parent.buy();buy();}, text: $data.name"></span>
+                <ul data-bind="foreach:$data.stuff">
+                    <li data-bind="text: $data.name"></li>
+                </ul>
+                <label>Balance : </label><span data-bind="text: bill;, updateValue: onClick "></span>
+                <button class=" btn btn-default" data-bind="attr:{href: '#'+$data.name}" data-toggle="modal">show Team!</button>
+                <div class = "modal fade" data-bind=" attr:{id : $data.name}" role="dialog">
+                    <div class = "modal-dialog" >
+                        <div class = "modal-content ">
+                            <div class = "modal-header">
+                                <h4><b>Your Team</b></h4>
+                            </div>
+                            <div data-bind="foreach:$data.stuff" class=" modal-body jumbotron col-xs-8 col-lg-12" >
+                                <section class="jumbotron col-xs-12" style="background-color: khaki;">
+                                    <img class="img-circle img-responsive col-xs-12 col-md-4" data-bind="attr:{src: $data.image}"/>
+                                    <label >Name : </label><span data-bind="text : $data.name"> </span><br/>
+                                    <label >Gender : </label><span data-bind="text : $data.gender"> </span><br/>
+                                    <label >cost : </label><span data-bind="text : $data.cost"> </span><br/><br/>
+                                    <label>Agility</label>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" data-bind="style:{width : (4*$data.Agility)+'%'}"  aria-valuemax="100" ></div>
+                                    </div>
+                                    <label>Strength</label>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" data-bind="style:{width : (4*$data.Strength)+'%'}"  aria-valuemax="100"> </div>
+                                    </div>
+                                    <label>Intelligence</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" data-bind="style:{width : (4*$data.Intelligence)+'%'}"  aria-valuemax="100"> </div>
+                                    </div>
+
+                                </section>
+                            </div>
+                            <div class="modal-footer">
+                                <label class="left" > Your total = $ </label><span data-bind="{text : $data.bill}"></span>
+                                <button class="btn btn-danger" data-bind=" click :  function(){ $data.sell(); $parent.sell();} ">Send Back</button>
+                                <button class="btn btn-success" data-bind="click : $parent.send">Click To Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="catalogue"  data-bind="foreach:inventory.items" class="jumbotron well col-xs-12 col-lg-9">
+            <section class="jumbotron col-xs-6 col-md-3" style="background-color: khaki;">
+                <img class="img-thumbnail img-responsive" data-bind="attr:{src: $data.image}"/>
+                <span data-bind="text : $data.name"></span><br/>
+                <label>$ </label><span data-bind="text : $data.cost"></span>
+            </section>
+        </div>
+    </div>
+</div>
+<footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid nav-center">
+        <span>&copy Shashaank Krishnatray</span>
+    </div>
+</footer>
+
+<script type="text/javascript" data-main="scripts/main-built" src="scripts/require.js"></script>
+</body>
+
+</html>

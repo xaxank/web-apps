@@ -1,0 +1,125 @@
+section{
+    display: inline-flex;
+}
+
+nav{
+    background-color: #c0c0c0;
+}
+
+[side="left"]{
+    float: left;
+    width: 20%;
+    background-color:blue;
+}
+
+[side="right"]{
+    float: right;
+    width: 20%;
+    background-color:mintcream;
+    cursor: hand;
+}
+
+[side='middle']{
+    width: 60%;
+    background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+}
+
+#files{
+    height: 40%;
+    width: 100%;
+    border: double ;
+    box-sizing: border-box;
+}
+
+#myCanvas{
+    width:100%;
+    height: 40%;
+}
+
+li{
+    cursor: pointer;
+}
+
+progress{
+    width: 100%;
+background-color: black;
+}
+
+#map-canvas{
+    height: 100%;
+    width: 100%;
+    border: dashed 2px;
+    box-sizing: border-box;
+}
+
+#audioPlay {
+    border: 1px solid #eeeeee;
+    width: 100%;
+    text-align: center;
+    background-color: goldenrod;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:640px){
+
+    .description{
+        display: block;
+    }
+
+    body{
+        position: relative;
+        overflow: auto;
+    }
+
+    nav{
+        background-color: #ffff00;
+    }
+
+    header{
+        position:relative;
+       }
+
+#version:after{
+    content:" (Mobile)" ;
+}
+
+    footer{
+   visibility: hidden;
+    }
+
+    [side="left"]{
+        width: 100%;
+        position: relative;
+        height: 50%;
+        float: none;
+    }
+
+    [side='middle']{
+        width: 100%;
+        position: relative;
+        height: 60%;
+        float: none;
+    }
+
+    [side='right']{
+        position: relative;
+        width: 100%;
+        height: 30%;
+        float: none;
+    }
+    
+    #audioPlay{
+        position: fixed;
+        bottom: 0px;
+        z-index: 1;
+    }
+
+    #myCanvas{
+        width: 100%;
+       max-height: 200px;
+        position: relative;
+    }
+
+}

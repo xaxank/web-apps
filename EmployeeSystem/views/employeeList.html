@@ -1,0 +1,22 @@
+<div>
+    <button ng-repeat="emp in emps" ng-click="getEmp(emp)">
+        {{ emp }}
+    </button>
+
+    <div ng-repeat="emp in empls" >
+        <span ng-show="emp.type == focusEmp" >{{ emp.name }}</span>
+    </div>
+
+    <form ng-submit="submit();" >
+        <h3>Add employee</h3>
+        <input type="text" name="name" required ng-model="name">
+        <input type="text" name="designation" required ng-model="desg">
+        <select  ng-model="employeeType">
+            <option ng-repeat="emp in emps">{{ emp }}</option>
+        </select>
+        <div align="right">
+            <button type="reset" ng-click="popEmp();" >Undo</button>
+            <button type="submit" id="submit"  >Add</button>
+        </div>
+    </form>
+</div>

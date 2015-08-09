@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>in-Sight</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body >
+<header class="navbar navbar-default">
+<a class="navbar-brand" href="index.html">In-Sight</a>
+<div align='right'><img src='http://www.hit-counts.com/counter.php?t=MTM1MjQzNQ==' border='0' alt='Free Hit Counter'><BR></div>
+</header>
+
+<div id="content" class="container-fluid">
+
+  <section id="appNav" class="col-xs-6">
+    <img id="activeDemo" class="img-responsive" src="assets/car.png" style="display: none;">
+    <span id="toolTip" style="display: none;" > </span>
+    <div  class="jumbotron selectionRotater alignCenter col-xs-12 col-md-8 col-lg-6 " >
+
+      <img draggable="true" ondrag="drag(event);" class="img-responsive stablize col-xs-6" name="VehicleReg" src="assets/car.png" >
+      <img draggable="true" ondrag="drag(event);" class="img-responsive stablize col-xs-6" name="MP3Player" src="assets/MP3Player.png" >
+      <img draggable="true" ondrag="drag(event);" class=" img-responsive stablize col-xs-6" name="CardGame" src="assets/cardGame.png" >
+      <img draggable="true" ondrag="drag(event);" class="img-responsive stablize col-xs-6" name="EmployeeSystem" src="assets/angularjs.png" >
+      <img draggable="true" ondrag="drag(event);" class=" img-responsive stablize col-xs-6" name="GeoTag" src="assets/geoTag.png" >
+      <img draggable="true" ondrag="drag(event);" class="img-responsive stablize col-xs-6" name="Flopkart" src="assets/flopKart.png">
+    </div>
+
+  </section>
+
+  <section id="app" class="col-xs-6">
+    <div id="intro">
+      <div class="jumbotron demoWindow">
+        <h1>
+          Drag And Drop An App From The Nav To View A Demo.
+        </h1>
+      </div>
+      <div class=" facebookTag  demoWindow">
+      <a href="https://www.facebook.com/xaxank" title="Shashaank Krishnatray" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/1694180701.1267.27726894.png" style="border: 0px;" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="jumbotron well demoWindow" style="display: none;" >
+      <iframe id="runIt">
+
+      </iframe>
+      <div class="jumbotron well controls ">
+          <span id="desc" class="col-xs-4" > pp</span>
+          <span id="appSite" class="col-xs-4" >
+            <input id="openAppSite" type="button" class="btn btn-block btn-success" value="View App in new Windowx">
+          </span>
+          <span id="codeLink" class="col-xs-4" >
+            <input id="openCodeSite" type="button" class="btn btn-block btn-danger" value="View on GitHub">
+          </span>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+
+<footer class="container">
+
+</footer>
+</body>
+<script type="text/javascript" src="srcipts/jquery.js"></script>
+<script type="text/javascript" src="srcipts/bootstrap.min.js"></script>
+<script type="text/javascript" src="srcipts/scripts.js"></script>
+</html>

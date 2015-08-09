@@ -1,0 +1,10 @@
+<form ng-submit="submit();" ng-hide="hide" ng-init="hide=false">
+    <h3>Remove an employee</h3>
+    <select  ng-model="delEmp">
+        <option ng-repeat="emp in emps">{{ emp }}</option>
+    </select>
+    <div align="right">
+        <button type="submit" name="submit" >delete</button>
+        <button ng-click=" hide=true" >Cancel</button>
+    </div>
+</form>

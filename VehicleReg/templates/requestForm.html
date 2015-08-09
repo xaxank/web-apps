@@ -1,0 +1,25 @@
+<form ng-submit="save();" class="contentBox">
+
+    <h2>Vehicle Service Request Form</h2>
+    <div>
+        <label  for="firstName"> First name : </label>
+        <input class="form-group" id="firstName" type="text" required ng-model="firstName"><br/><br/>
+        <label  for="lastName"> Last name : </label>
+        <input  class="form-group" id="lastName" required type="text" ng-model="lastName"><br/><br/>
+        <label  for="vehicleReg"> Vehicle registration no : </label>
+        <input  class="form-group" id="vehicleReg" required type="text" ng-model="vehicleReg"><br/><br/>
+        <label  for="mobNumber"> Mobile number : </label>
+        <input  class="form-group" id="mobNumber" required type="number" ng-model="mobNumber" ><br/><br/>
+        <label  for="address"> Address : </label>
+        <textarea class="form-group"  required id="address" ng-model="address"></textarea><br/><br/><br/>
+        <label  for="pickUpDate"> Pickup date : </label>
+        <input  class="form-group" id="pickUpDate" required type="date" ng-model="pickUpDate" ><br/><br/>
+        <label  for="returnDate"> Return date : </label>
+        <input  class="form-group" id="returnDate" required type="date" ng-model="returnDate" ><br/><br/>
+        <div class="navigators">
+            <button class="form-group"  type="submit" >Submit Request</button>
+        </div>
+    </div>
+
+
+</form>

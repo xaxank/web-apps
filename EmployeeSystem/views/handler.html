@@ -1,0 +1,20 @@
+<div>
+    <button ng-click="add();">Create Employee Type</button>
+    <button ng-click="del();">Delete Employee Type</button>
+
+    <div ng-switch="curl">
+        <div ng-switch-when="add">
+            <div ng-controller="addEmployeeType">
+                <ng-include src="url"></ng-include>
+            </div>
+        </div>
+        <div ng-switch-when="del">
+            <div ng-controller="deleteEmployeeType">
+                <ng-include src="url"></ng-include>
+            </div>
+        </div>
+        <div ng-switch-default="">
+
+        </div>
+    </div>
+</div>

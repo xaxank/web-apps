@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>MP3 Player</title>
+    <meta name="author" content="Shashaank Krishnatray">
+    <meta name="description" content="learning about buttons/selectors in css and js HTML5">
+    <meta name="generator" content="local host">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/playerStyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+</head>
+<body>
+<header >
+    <nav >
+        <a id="version" href="index.html">Home</a>
+    </nav>
+</header>
+<div class="description">
+    <div side="left">
+        <section id="map-canvas">
+
+        </section>
+    </div>
+    <div side="middle">
+        <section>
+            <h2>Simple mp3 Player</h2>
+        </section>
+        <section >
+            <div id="files">
+                <span id="nameOfSong">Drop MP3 here</span>
+                <canvas id="myCanvas">
+
+                </canvas>
+            </div>
+        </section>
+        <br/>
+        <section id="audioPlay">
+            <audio id="player"></audio>
+            <progress id="bar" value="0" max="100"></progress><br/>
+            <button id="Prev">Prev</span></button>
+            <button id="play" value="Pause">Play/Pause</button>
+            <button id="Next">Next</button>
+        </section><br/>
+    </div>
+    <div side="right">
+        <label>Playlist</label>
+        <ol id="playlist">
+        </ol>
+        <br/>
+        <br/>
+    </div>
+</div>
+<footer >
+    <text><i>footer</i></text>
+</footer>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/mediaScripts.js"></script>
+</html>

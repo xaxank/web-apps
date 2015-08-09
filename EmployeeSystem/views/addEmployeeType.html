@@ -1,0 +1,8 @@
+<form ng-submit="submit()" ng-hide="hide" ng-init="hide=false">
+    <h3>Add an employee</h3>
+    <input type="text" name="text" ng-required ng-model="employeeType">
+    <div align="right">
+        <button type="submit" id="submit" >Add</button>
+        <button ng-click=" hide=true " >Cancel</button>
+    </div>
+</form>

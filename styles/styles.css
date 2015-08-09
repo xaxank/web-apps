@@ -1,0 +1,224 @@
+html{
+    width: 100%;
+    height: 90%;
+
+}
+
+
+body{
+    height: 95.5%;
+    background-color: transparent;
+    overflow-y: auto;
+    background-attachment: fixed;
+    /*background-position: center center;*/
+    background-size: cover;
+    background-position: right center;
+    background-image: url("../assets/super.jpg");
+    -moz-background-image: url("../assets/super.jpg");
+    -o-background-image: url("../assets/super.jpg");
+    -webkit-background-image: url("../assets/super.jpg");
+}
+
+
+header{
+
+}
+
+span{
+    color: wheat;
+}
+
+#appNav img:hover{
+    background-color: orange !important;
+     border-radius: 50%;
+}
+
+
+#content{
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+section{
+    height: 100%;
+    background-color: rgba(55,55,55,0.3);
+}
+
+#activeDemo{
+    background-color: #207cca;
+    border-radius: 20%;
+    animation: pulse 2s linear infinite;
+}
+
+.selectionRotater{
+    position: relative;
+    -webkit-animation: rotator 15s linear infinite;
+    animation: rotator 15s linear infinite;
+    /*-webkit-transform-origin: 35% 35% 0;*/
+    /*-ms-transform-origin: 35% 35% 0;*/
+    /*transform-origin: 50% 50% 0;*/
+
+    background-color: transparent;
+
+    padding: 0;
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
+    /*background-image: url("../assets/main-circle.png");*/
+    /*-moz-background-image: url("../assets/main-circle.png");*/
+    /*-o-background-image: url("../assets/main-circle.png");*/
+    /*-webkit-background-image: url("../assets/main-circle.png");*/
+}
+
+.stablize{
+    -webkit-animation: stablizer 15s linear infinite  ;
+    animation: stablizer 15s linear infinite ;
+
+}
+
+.selectionRotater :nth-child(1){
+    margin-top: -25%;
+}
+
+.selectionRotater :nth-child(2){
+    margin-top: -25%;
+}
+
+.selectionRotater :nth-child(3){
+    float: left;
+    margin-top: 20%;
+    left: -40%;
+}
+
+.selectionRotater :nth-child(4){
+    float: right;    margin-top: 20%;    right: -40%;
+}
+
+.selectionRotater :nth-child(5){
+    float: left;    margin-top: 20%;    margin-left: 1%;
+}
+
+.selectionRotater :nth-child(6){
+    float: right;  margin-right: 1%;  margin-top: -38%;
+}
+
+
+
+
+
+#runIt{
+    width:100%;
+    height: 75%;
+}
+
+section{
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.demoWindow{
+    float: right;
+    width: 95%;
+    height: 100%;
+}
+
+.facebookTag {
+    margin-bottom: 0;
+}
+
+.controls{
+    position: relative;
+    margin-bottom: 0;
+    height: 20%;
+}
+
+#desc{
+    color: #1e5799;
+}
+
+@-webkit-keyframes rotator {
+    0%{
+        -webkit-transform:  translate3d(-50%,-50%,0) rotateZ(0deg);
+        transform:  translate3d(-50%,-50%,0) rotateZ(0deg);
+
+    }
+    100%{
+        -webkit-transform:  translate3d(-50%,-50%,0) rotateZ(-359deg);
+        transform:  translate3d(-50%,-50%,0) rotateZ(-359deg);
+    }
+
+}
+
+@keyframes rotator {
+    0%{
+        -webkit-transform:  translate3d(-50%,-50%,0) rotateZ(0deg);
+        transform:  translate3d(-50%,-50%,0) rotateZ(0deg);
+
+    }
+    100%{
+        -webkit-transform:  translate3d(-50%,-50%,0) rotateZ(-359deg);
+        transform:  translate3d(-50%,-50%,0) rotateZ(-359deg);
+    }
+
+}
+
+@-webkit-keyframes stablizer {
+    0%{
+        -webkit-transform:  rotateZ(-359deg);
+        transform: rotateZ(-359deg);
+
+    }
+    100%{
+        -webkit-transform: rotateZ(0deg);
+        transform:  rotateZ(0deg);
+    }
+
+}
+
+@keyframes stablizer {
+    0%{
+        -webkit-transform:  rotateZ(-359deg);
+        transform: rotateZ(-359deg);
+
+    }
+    100%{
+        -webkit-transform: rotateZ(0deg);
+        transform:  rotateZ(0deg);
+    }
+
+}
+
+
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform:  scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.alignCenter{
+    top:50%;
+    left:50%;
+    -webkit-transform:  translate3d(-50%,-50%,0);
+    transform:  translate3d(-50%,-50%,0);
+}
+
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+}

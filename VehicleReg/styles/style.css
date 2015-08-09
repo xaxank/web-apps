@@ -1,0 +1,49 @@
+.contentBox{
+    margin:5px;
+    padding: 5px;
+    border: hidden 5px;
+    min-width: 420px;
+    height: auto;
+    width: 30%;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+.listing{
+    margin:5px;
+    padding: 5px;
+    border: none;
+    min-width: 370px;
+    background-color: lightgray;
+    width: 85%;
+}
+
+.navigators{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+}
+
+.listing > input,button,a{
+    min-width: 23%;
+    width: auto;
+    float: right;
+}
+
+
+input, textarea{
+    width: 60%;
+    float: right;
+    resize: none;
+}
+
+label{
+    width: 30%;
+}
+
+h2{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}

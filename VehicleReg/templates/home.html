@@ -1,0 +1,16 @@
+<div class="contentBox">
+    <h2> Vehicle Service Management </h2>
+    <div ng-repeat="item in stuff" >
+        <div class="listing">
+            <span >{{ item.firstname }}</span>
+            <span >{{ item.vehiclereg}}</span>
+            <a href="#requestView/{{ item.vehiclereg }}"><button>View</button></a>
+            <button ng-click="del($index);">Delete</button>
+        </div>
+    </div>
+
+    <div class="navigators">
+        <button ng-click="Undo();" >Undo</button>
+        <a href="#requestForm"><button >Add New Request</button></a>
+    </div>
+</div>
