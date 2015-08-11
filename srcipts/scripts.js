@@ -38,7 +38,7 @@ function beginDemo(){
 
     $('.controls').show();
 
-    $('#desc').get(0).innerText = description[appName];
+    $('#desc').get(0).innerHTML = description[appName];
 
     $('.demoWindow').show();
     var demoWindow = $('#runIt');
